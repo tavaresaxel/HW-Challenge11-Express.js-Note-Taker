@@ -31,11 +31,7 @@ app.get("*", (req,res) =>{
     res.sendFile(path.join(_dirname, './public/index.html'))
 })
 
-app.get("/notes", (req,res) =>{
-    fs.readFile("./Assets/db/db.json", "utf-8", (err, data) =>{
-        const db = JSON.parse
-    })
-})
+
 
 
 
