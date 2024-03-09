@@ -15,7 +15,7 @@ const fs = require("fs")
 //API route
 
 app.get("/api/notes", (req,res) => {
-    fs.readFile("./Assets/db/db.json", "utf-8", (err, data) =>{
+    fs.readFile("./db/db.json", "utf-8", (err, data) =>{
         const newData =JSON.parse(data)
         res.json(newData)
     })
@@ -33,7 +33,9 @@ app.get("*", (req,res) =>{
 
 
 
-
+app.get("/notes",(req,res)=>{
+    res.sendFile( path.join(__dirname,"./public/notes.html") )
+  })
 
 
 app.listen(PORT, ()=>{
