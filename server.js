@@ -19,14 +19,15 @@ app.use("/api", route )
 
 
 
+
 app.get("/notes",(req,res)=>{
-    res.sendFile( path.join(_dirname,"./public/notes.html") )
+    res.sendFile( path.join(__dirname,"./public/notes.html") )
 })
 
 //htmal route
 //
 app.get("*", (req,res) =>{
-    res.sendFile(path.join(_dirname, "./public/index.html"))
+    res.sendFile(path.join(__dirname, "./public/index.html"))
 })
 
 
